@@ -1,0 +1,12 @@
+.header {
+  height: 5vh;
+  background-color: var(--clr-primary);
+  color: var(--clr-bg);
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+
+.headerTitle {
+  padding-left: 3vw;
+}
