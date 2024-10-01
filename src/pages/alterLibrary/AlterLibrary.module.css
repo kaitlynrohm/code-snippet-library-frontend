@@ -1,0 +1,49 @@
+.page {
+  background-color: var(--clr-bg);
+  height: 93vh;
+  color: var(--clr-text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Component styling */
+.tagDiv {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4vh;
+}
+
+.tagGrid {
+  margin-top: 2vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 90%;
+}
+
+.gridItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.selectDiv,
+.checkboxDiv {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1vh;
+}
+
+#checkboxGridItem {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.checkboxDiv {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 100%;
+  text-align: center;
+}
