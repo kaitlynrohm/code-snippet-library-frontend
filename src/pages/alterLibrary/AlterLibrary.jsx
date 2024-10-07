@@ -1,6 +1,6 @@
 import styles from "./AlterLibrary.module.css";
 import AddSnippet from "./components/AddSnippet";
-import Tags from "./components/Tags";
+import Tags from "../../components/Tags";
 export default function AlterLibrary() {
   return (
     <div className={styles.page}>

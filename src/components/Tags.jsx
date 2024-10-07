@@ -1,4 +1,4 @@
-import styles from "../AlterLibrary.module.css";
+import styles from "./ComponentStyles.module.css";
 export default function Tags() {
   return (
     <div className={styles.tagDiv}>
@@ -48,8 +48,7 @@ export default function Tags() {
           <h3>Tags</h3>
           <div className={styles.checkboxDiv}>
             <label>
-              <input type="checkbox" value={false} />
-              Page switch
+              <input type="checkbox" value={false} /> Page switch
             </label>
             <label>
               <input type="checkbox" value={false} /> Carousel

@@ -8,42 +8,21 @@
 }
 
 /* Component styling */
-.tagDiv {
-  width: 95%;
+.inputDiv {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  margin-bottom: 4vh;
+  height: 30vh;
+  width: 70%;
 }
 
-.tagGrid {
-  margin-top: 2vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  width: 90%;
-}
-
-.gridItem {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.selectDiv,
-.checkboxDiv {
-  display: flex;
-  flex-direction: column;
-  margin-top: 1vh;
-}
-
-#checkboxGridItem {
-  grid-column-start: 1;
-  grid-column-end: 4;
-}
-
-.checkboxDiv {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+.textInputDiv {
+  text-align: left;
   width: 100%;
-  text-align: center;
+}
+
+.textInputDiv textarea {
+  height: 20vh;
+  width: 100%;
 }
