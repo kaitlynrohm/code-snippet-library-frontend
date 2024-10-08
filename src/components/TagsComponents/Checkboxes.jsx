@@ -1,9 +1,7 @@
 import { useState } from "react";
 import styles from "../ComponentStyles.module.css";
 import Checkbox from "./Checkbox";
-export default function Checkboxes({ tags }) {
-  const [checked, setChecked] = useState([false, false, false]);
-
+export default function Checkboxes({ tags, checked, setChecked }) {
   return (
     <div className={styles.checkboxDiv}>
       {tags.map((tag, i) => {
