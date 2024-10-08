@@ -1,4 +1,6 @@
 import styles from "./ComponentStyles.module.css";
+import Checkboxes from "./TagsComponents/checkboxes";
+import RadioBtns from "./TagsComponents/RadioBtns";
 export default function Tags() {
   return (
     <div className={styles.tagDiv}>
@@ -6,57 +8,19 @@ export default function Tags() {
       <div className={styles.tagGrid}>
         <div className={styles.gridItem}>
           <h3>End</h3>
-          <div className={styles.selectDiv}>
-            <label>
-              <input type="radio" value="frontend" name="end" /> Frontend
-            </label>
-            <label>
-              <input type="radio" value="backend" name="end" /> Backend
-            </label>
-          </div>
+          <RadioBtns name="end" options={["frontend", "backend"]} />
         </div>
         <div className={styles.gridItem}>
           <h3>Language</h3>
-          <div className={styles.selectDiv}>
-            <label>
-              <input type="radio" value="javascript" name="language" />{" "}
-              Javascript
-            </label>
-            <label>
-              <input type="radio" value="c#" name="language" /> C#
-            </label>
-            <label>
-              <input type="radio" value="python" name="language" /> Python
-            </label>
-          </div>
+          <RadioBtns name="language" options={["javascript", "python", "c#"]} />
         </div>
         <div className={styles.gridItem}>
           <h3>Tool</h3>
-          <div className={styles.selectDiv}>
-            <label>
-              <input type="radio" value="react" name="Tool" /> React
-            </label>
-            <label>
-              <input type="radio" value="unity" name="Tool" /> Unity
-            </label>
-            <label>
-              <input type="radio" value="dotNet" name="Tool" /> .Net
-            </label>
-          </div>
+          <RadioBtns name="tool" options={["react", "unity", ".net", "none"]} />
         </div>
         <div className={styles.gridItem} id={styles.checkboxGridItem}>
           <h3>Tags</h3>
-          <div className={styles.checkboxDiv}>
-            <label>
-              <input type="checkbox" value={false} /> Page switch
-            </label>
-            <label>
-              <input type="checkbox" value={false} /> Carousel
-            </label>
-            <label>
-              <input type="checkbox" value={false} /> Api set up
-            </label>
-          </div>
+          <Checkboxes tags={["page switch", "carousel", "api set up"]} />
         </div>
       </div>
     </div>
