@@ -11,7 +11,13 @@ export default function AlterLibrary() {
     "python",
     "c#",
   ]);
-  const [toolTags, setToolTags] = useState(["react", "unity", ".net", "none"]);
+  const [toolTags, setToolTags] = useState([
+    "react",
+    "unity",
+    ".net",
+    "node.js",
+    "none",
+  ]);
   const [generalTags, setGeneralTags] = useState([
     "page switch",
     "carousel",
@@ -23,6 +29,11 @@ export default function AlterLibrary() {
     language: "",
     tool: "",
   });
+
+  const handleBtnClick = () => {
+    const snippetInfo = { title: title, ...radioSelect, snippet: snippet };
+    console.log(snippetInfo);
+  };
   return (
     <div className={styles.page}>
       <h1>Alter the code snippets library</h1>
@@ -35,9 +46,12 @@ export default function AlterLibrary() {
         setChecked={setChecked}
         radioSelect={radioSelect}
         setRadioSelect={setRadioSelect}
+        type={"add"}
       />
       <AddSnippet setTitle={setTitle} setSnippet={setSnippet} />
-      <button className={styles.addBtn}>Add</button>
+      <button className={styles.addBtn} onClick={handleBtnClick}>
+        Add
+      </button>
     </div>
   );
 }

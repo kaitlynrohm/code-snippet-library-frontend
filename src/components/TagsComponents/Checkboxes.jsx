@@ -1,7 +1,7 @@
-import { useState } from "react";
 import styles from "../ComponentStyles.module.css";
 import Checkbox from "./Checkbox";
-export default function Checkboxes({ tags, checked, setChecked }) {
+import AddTag from "./addTag";
+export default function Checkboxes({ tags, checked, setChecked, type }) {
   return (
     <div className={styles.checkboxDiv}>
       {tags.map((tag, i) => {
@@ -15,6 +15,7 @@ export default function Checkboxes({ tags, checked, setChecked }) {
           />
         );
       })}
+      {type == "add" ? <AddTag section="tags" /> : null}
     </div>
   );
 }
